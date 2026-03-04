@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-dark: #080d1a;
+  --color-charcoal: #0f1628;
+  --color-gold: #D4AF37;
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-sans: 'Montserrat', sans-serif;
+}
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-dark);
+    color: #ffffff;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  input, select, textarea, button {
+    font-family: inherit;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-dark);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(212, 175, 55, 0.3);
+    border-radius: 999px;
+  }
+}
+
+@layer components {
+  .btn-gold {
+    @apply bg-gold text-dark font-semibold px-6 py-3 rounded-sm transition-all duration-200 hover:opacity-90 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-outline-gold {
+    @apply border border-gold text-gold font-semibold px-6 py-3 rounded-sm transition-all duration-200 hover:bg-gold/10 active:scale-95;
+  }
+
+  .input-dark {
+    @apply w-full bg-dark border border-gold/20 rounded-sm px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-gold transition-colors duration-200;
+  }
+
+  .card-dark {
+    @apply bg-charcoal border border-gold/20 rounded-sm;
+  }
+}
