@@ -13,6 +13,7 @@ import Signup from './pages/Signup';
 // User pages
 import Booking from './pages/Booking';
 import Dashboard from './pages/Dashboard';
+import OrderPage from './pages/OrderPage';
 
 // Admin pages
 import AdminDashboard from './pages/admin/AdminDashboard';
@@ -38,6 +39,7 @@ function App() {
         <Route element={<ProtectedRoute />}>
           <Route path="booking" element={<Booking />} />
           <Route path="bookings" element={<Booking />} />
+          <Route path="order" element={<OrderPage />} />
           <Route path="dashboard" element={<Dashboard />} />
         </Route>
       </Route>

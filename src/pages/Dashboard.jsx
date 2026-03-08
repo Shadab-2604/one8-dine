@@ -46,7 +46,7 @@ const Dashboard = () => {
   if (loading) return <LoadingSpinner />;
 
   return (
-    <div style={{ maxWidth: '860px', margin: '0 auto', padding: '3rem 1.5rem' }}>
+    <div style={{ maxWidth: '860px', margin: '0 auto', padding: 'clamp(2rem, 5vw, 3rem) 1.5rem' }}>
       {/* Header */}
       <div style={{ marginBottom: '2rem' }}>
         <h1
@@ -66,7 +66,7 @@ const Dashboard = () => {
       </div>
 
       {/* Summary Row */}
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '2rem' }}>
+      <div className="grid grid-cols-1 sm:grid-cols-2" style={{ gap: '1rem', marginBottom: '2rem' }}>
         {[
           { icon: <CalendarDays size={22} color="#D4AF37" />, label: 'Bookings', count: bookings.length },
           { icon: <ShoppingBag size={22} color="#D4AF37" />, label: 'Orders', count: orders.length },

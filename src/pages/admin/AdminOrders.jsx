@@ -97,6 +97,9 @@ const AdminOrders = () => {
                     <p style={{ color: '#fff', fontWeight: 700, fontSize: '16px', marginBottom: '0.3rem' }}>
                       {order.user?.name || 'Unknown'}
                     </p>
+                    <p style={{ color: '#9ca3af', fontSize: '12px', marginBottom: '0.5rem' }}>
+                      Table {order.table?.number || 'N/A'} · {order.guests} guests · {order.date} at {order.time}
+                    </p>
                     <p style={{ color: '#9ca3af', fontSize: '12px', marginBottom: '1rem' }}>
                       Order #{order._id?.substring(0, 10)} · {formatDateTime(order.createdAt)}
                     </p>
